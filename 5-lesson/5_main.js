@@ -36,5 +36,19 @@ const nameSort = students.sort((a, b) => a.name.localeCompare(b.name))
 console.log(nameSort)
 
 //bubble sort
-
-
+const nums = [12, 45, 91, 23, 34, 9, 77, 1]
+for (let j = 0; j < nums.length - 1; j++) {
+    let isSorted = true;
+    for (let i = 0; i < nums.length - 1 - j; i++) {
+        if (nums[i] > nums[i + 1]) {
+            isSorted = false;
+                /*     let temp = nums[i]
+                nums[i] = nums[i + 1]
+                nums[i + 1] = temp*/
+                [nums[i], nums[i + 1]] = [nums[i + 1], nums[i]] //деструктуризация массива
+        }
+    }
+    if (isSorted) break
+}
+console.log(nums)
+console.log(nums.length)
