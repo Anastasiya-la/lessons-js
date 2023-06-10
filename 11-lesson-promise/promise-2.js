@@ -1,4 +1,4 @@
-const alex = {
+/*const alex = {
     askFile() {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
@@ -10,7 +10,7 @@ const alex = {
     }
 }
 
-const promise = alex.askFile();
+const promise = alex.askFile();*/
 
 /*
 promise.then((result) => {
@@ -133,7 +133,7 @@ alex.askFile()
 
 
 // часто используемая
-alex.askFile()
+/*alex.askFile()
     .then(() => {
         console.log('Then')
     })
@@ -142,4 +142,92 @@ alex.askFile()
     })
     .finally(() => {
         console.log('Finally')
+    })*/
+
+// Promise.all & Promise.allSettled
+/*const promise1 = fetch('https://google.com')
+
+promise1
+    .then((data) => {
+        console.log(data)
     })
+
+const promise2 = fetch('https://vk.com')
+
+promise2.then((data) => {
+    console.log(data)
+})
+
+const otherPromise = Promise.all([promise1, promise2])
+const otherPromise2 = Promise.allSettled([promise1, promise2])
+
+otherPromise
+    .then((results) => console.log(results))
+    .catch(() => {
+
+    })*/
+
+//Promise.resolve Promise.reject
+
+const resolvedPromise = Promise.resolve(100)
+console.log(resolvedPromise)
+
+/*const rejectedPromise = Promise.reject({message: 'Some error'})
+console.log(rejectedPromise)*/
+
+/*function getNumber() {
+    return Promise.resolve(Math.random())
+}*/
+
+/*function getNumber() {
+    let promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(Math.random())
+        }, 2000)
+    })
+    return promise
+}
+
+getNumber().then(n => console.log(n))
+getNumber().then(n => console.log(n))*/
+
+/*const wait = (duration) => {
+
+    let promise = new Promise((res) => {
+        setTimeout(() => {
+            res()
+        }, duration)
+    })
+
+    return promise
+
+}
+
+async function run() {
+    await wait(1000)
+    console.log(1)
+    await wait(1000)
+    console.log(2)
+    await wait(1000)
+    console.log(3)
+}
+
+run()*/
+
+const api = {
+    async save() {
+
+    },
+    async read() {
+        return {name: 'it-kamasutra'}
+    }
+}
+
+async function run2() {
+    await api.save()
+    console.log('saved')
+    let data = await api.read()
+    console.log('read: ', data)
+}
+
+run2()
