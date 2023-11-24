@@ -169,8 +169,8 @@ otherPromise
 
 //Promise.resolve Promise.reject
 
-const resolvedPromise = Promise.resolve(100)
-console.log(resolvedPromise)
+/*const resolvedPromise = Promise.resolve(100)
+console.log(resolvedPromise)*/
 
 /*const rejectedPromise = Promise.reject({message: 'Some error'})
 console.log(rejectedPromise)*/
@@ -214,6 +214,7 @@ async function run() {
 
 run()*/
 
+/*
 const api = {
     async save() {
 
@@ -230,4 +231,5 @@ async function run2() {
     console.log('read: ', data)
 }
 
-run2()
+run2()*/
+

@@ -4,15 +4,14 @@ console.log(this)
 console.log(this===window);*/
 
 
-//2. function(), arrow function () =>{}
-// const foo = () => {
-//    console.log(this);
-//}
+/*2. function(), arrow function () =>{}*/
+/*const foo = () => {
+   console.log(this);
+}
 
-//foo()
+foo()*/
 
-/*
-function bar() {
+/*function bar() {
     const foo = () => {
         console.log(this);
     };
@@ -69,8 +68,7 @@ car.showBrand()
 car1.show()*/
 
 
-/*
-const car1 =  {
+/*const car1 =  {
     brand: 'opel'
 }
 
@@ -100,14 +98,13 @@ car1.showBrand()*/
 
 const car2 = {
     brand: 'opel'
-}
+}*/
 
-/!*
-car1.showBrand.call(car2, 1, 2);
+/*car1.showBrand.call(car2, 1, 2);
 car1.showBrand.apply(car2, [1, 3]);
 const a = car1.showBrand.bind(car2, 1, 4)
 
-a()*!/*/
+a()*/
 
 /*const car1 = {
     brand: 'bmw',
@@ -143,16 +140,14 @@ const car2 = new Car('opel')
 console.log(car1.brand)
 console.log(car2.brand)*/
 
-/*
-const car = {
+/*const car = {
     brand: 'bmw',
     showBrand: () => {
         console.log(this.brand)
     }
 }
 
-setTimeout(car.showBrand, 1000)
-*/
+setTimeout(car.showBrand, 1000)*/
 
 /*const car = {
     brand: 'bmw',
@@ -248,6 +243,7 @@ const innerFuncWithObjContext = outerFunction.call(obj)
 obj.foo=innerFuncWithObjContext
 obj.foo()*/
 
+/*
 const obj = {
     a: 1,
     b: function (){
@@ -256,4 +252,4 @@ const obj = {
 };
 const a = 2;
 const fn = obj.b;
-fn()
+fn()*/
